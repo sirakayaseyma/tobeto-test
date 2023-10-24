@@ -1,3 +1,3 @@
 # tobeto-test
 
-Tobeto eğitimi
+Tobeto yazılım Kalite ve Test Uzmanı Eğitimi kapsamında yazılan kodlar
