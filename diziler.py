@@ -16,5 +16,10 @@ print(sayilar)
 sayilar.remove(100) # ilk bulduğumuz değeri siler. ilk bulunan 100 değeri. Birden fazla 100 varsa ilk bulduğu 100 değerini silmiş olur.
 print(sayilar)
 
-sayilar.extend([10,20,30]) # yeni bir dizi ekleyebilirim
+sayilar.extend([10,20,30]) # yeni bir dizi ekleyebilirim. Toplu veri eklememe yardımcı olur.
 print(sayilar)
+
+sayilar.clear()  #dizinin içini tamamen siler
+print(sayilar)
+
+
