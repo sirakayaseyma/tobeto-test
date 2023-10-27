@@ -1,9 +1,9 @@
 """ 3- Kullanıcıdan girilen sayının EBOB ve EKOK'unu bulan programı yazınız. """
 
 # EBOB hesaplama 
-def ebob_hesapla(a, b):
-    while b:
-        a, b = b, a % b
+def ebob_hesapla(a, b): 
+    while b:         
+        a, b = b, a % b   
     return a
 
 # EKOK hesaplama
