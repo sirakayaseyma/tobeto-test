@@ -56,4 +56,12 @@
       select  product_name , category_name , company_name 
       from products as p join categories as c on p.category_id = c.category_id join suppliers as s on p.supplier_id = s.supplier_id 
       order by p.unit_price desc LIMIT 1
+
+      Diğer cevap : 
+      SELECT p.product_name, c.category_name, s.company_name FROM products as p
+      inner join categories as c on c.category_id = p.category_id
+      inner join suppliers as s on p.supplier_id = s.supplier_id
+      where p.product_id = (Select product_id from order_details
+      group by product_id
+      order by SUM(quantity) desc LIMIT 1)
       
