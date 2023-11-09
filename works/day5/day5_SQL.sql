@@ -36,6 +36,11 @@
   select contact_name,phone,  CONCAT(SUBSTRING(phone, 0,7)) AS formatted_phone from customers c  
   inner join orders o  on o.customer_id=c.customer_id
   where order_date between '1997-01-01' and '1997-12-31'
+  --Çözüm 3
+   select distinct o.order_date,  c.contact_name, translate(phone, '()-. ','') as telephone 
+   from orders o 
+   inner join customers c on c.customer_id = o.customer_id
+   where o.order_date between '1997-01-01' and '1997-12-31' order by c.contact_name
 --35. Sipariş tarihi, müşteri contact name, çalışan ad, çalışan soyad
   select order_date,contact_name,first_name,last_name from orders o
   inner join customers c on c.customer_id=o.customer_id
@@ -93,10 +98,10 @@
 	from employees e inner join orders o  on o.employee_id = e.employee_id
 	order by order_date	
 --45. SON 5 siparişimin ortalama fiyatı ve orderid nedir?
-  select avg(order_details.unit_price) as ortalamafiyat , orders.order_id as siparisid 
-  from orders inner join order_details on orders.order_id = order_details.order_id
-  group by orders.order_id
-  order by order_date desc
+  select order_id , avg(od.unit_price * od.quantity ) 
+  from order_details od
+  group by od.order_id
+  order by od.order_id desc
   limit 5   
 --46. Ocak ayında satılan ürünlerimin adı ve kategorisinin adı ve toplam satış miktarı nedir?
   select p.product_name , c.category_name, sum(od.quantity)
