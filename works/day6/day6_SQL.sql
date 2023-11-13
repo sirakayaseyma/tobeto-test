@@ -102,9 +102,8 @@ group by o.order_id , cu.customer_id, e.first_name ,e.last_name,
 od.product_id, od.unit_price, c.category_name , p.supplier_id
 --109. Altında ürün bulunmayan kategoriler
 select c.category_id, c.category_name , p.product_name
-from categories c  inner join  products p on p.category_id = c.category_id
+from categories c  left join  products p on p.category_id = c.category_id
 where p.product_id is null
--- Her kategoride ürün var
 --110. Manager ünvanına sahip tüm müşterileri listeleyiniz.
 select contact_title  from customers
 where contact_title like '%Manager%'
@@ -132,7 +131,7 @@ DATE_PART('year', AGE(current_date, birth_date)) as age
 from employees 
 --118. 35 gün içinde sevk edilmeyen satışları listeleyiniz.
 select order_id , customer_id , order_date, shipped_date
-from orders where shipped_date is null and  (current_date - order_date) > 35
+from orders where shipped_date is null and  (current_date - order_date) >= 35
 --119. Birim fiyatı en yüksek olan ürünün kategori adını listeleyiniz. (Alt Sorgu)
 select category_name , unit_price from categories c 
 inner join products p on c.category_id = p.category_id
