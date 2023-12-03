@@ -1,0 +1,25 @@
+Frame: Kullanmak istediğim ekran tipini belirlememe yardımcı olur.
+    X:Yataydaki konum
+    Y:Dikeydeki konum
+    W:Width (Geniişlik) konumu
+    H:Yükseklik konumu
+    Bunlara ek olarak açı ve köşe yuvarlatma yapılabilir.
+Clip content: Taşan alanları gizler.
+
+
+Fill:Arka plan rengini seçmeme yardımıc olur. Geçişli renkler yapabileceğim kısımlar bulunur.
+Stroke:Dış kenar çizgisi
+
+Rectangle=Kare
+Line:Çizgi
+Arrow:Ok işareti
+Ellipse:Elips 
+Star:Yıldız
+
+Kare ve Elips yaparken shift tuşuna basarsam tam kare ve tam elips çizmemi sağlar.
+Dolgu rengi ve dış çizgi rengi yer değiştirsin istiyorsam  shift+x tuşuna basılır.
+
+Poligon aracında kenar sayısını ayarlayabiliyoruz.
+Star aracındada istediğim kenar verip büyütüp küçültebiliyoruz.
+ctrl+shift+k ile dosyadan resim eklenebilir. Ekranın üzerinde seçili olarak seçilirse. 
+alt tuşu objeleri kopyalar
