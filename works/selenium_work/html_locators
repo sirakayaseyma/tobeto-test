@@ -1,0 +1,40 @@
+HTML locators, web sayfalarındaki belirli HTML öğelerini 
+veya elementlerini tanımlamak ve bulmak için kullanılan ifadelerdir. 
+Web otomasyon testleri, web scraping veya benzeri uygulamalarda HTML locators, 
+belirli bir HTML öğesine referans sağlamak için kullanılır. 
+HTML locators, web sayfasındaki öğeleri belirlemenin 
+ve bu öğelerle etkileşimde bulunmanın bir yolunu sağlar.
+
+En yaygın kullanılan HTML locators şu şekildedir:
+
+ID (Kimlik): 
+HTML öğelerine benzersiz bir tanımlayıcı (ID) eklemek, 
+belirli bir öğeyi tanımlamak için kullanılabilir. 
+
+Örneğin:
+<input type="text" id="username">
+
+Class (Sınıf): 
+Bir veya daha fazla HTML öğesine aynı sınıf adını eklemek,
+bu öğeleri bir grup olarak tanımlamak için kullanılır. 
+
+Örneğin:
+<button class="submit-button">Gönder</button>
+
+Name (Ad): 
+HTML öğelerine ad eklemek, bu öğeleri belirlemek için kullanılabilir. 
+Örneğin:
+<input type="radio" name="gender" value="male"> Erkek
+<input type="radio" name="gender" value="female"> Kadın
+
+Tag Name (Etiket Adı): 
+HTML öğelerinin etiket adlarına göre belirlenmesi. 
+Örneğin:
+<h1>Başlık</h1>
+
+XPath ve CSS Selectors: 
+XPath ve CSS Selectors, daha karmaşık ve esnek seçicilerdir. 
+Belirli bir öğeyi tanımlamak için HTML dokümanındaki yolunu veya stilini kullanır. 
+Örneğin:
+XPath: //input[@id='username']
+CSS Selector: input#username
