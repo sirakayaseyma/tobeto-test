@@ -40,11 +40,11 @@ class Test_SauceDemo:
         #ANASAYFAYA ULAŞIP ULAŞMADIĞININ KANITI
         #headerLogo = WebDriverWait(self.driver,5).until(ec.visibility_of_element_located((By.XPATH , "//*[@id='header_container']/div[1]/div[2]/div")))
         #testResult = headerLogo.text == "Swag Labs"
-        addToCart = WebDriverWait(self.driver,5).until(ec.visibility_of_element_located((By . XPATH , "//*[@id='add-to-cart-test.allthethings()-t-shirt-(red)']")))
-        actionChains = ActionChains(self.driver) #sayfayı kaydırmama yardımcı olur.
-        actionChains.move_to_element(addToCart)
+        addToCart = WebDriverWait(self.driver,5).until(ec.visibility_of_element_located((By . XPATH , "//*[@id='add-to-cart-test.allthethings()-t-shirt-(red)']"))) #gitmek istediğim yeri belirt
+        actionChains = ActionChains(self.driver) 
+        actionChains.move_to_element(addToCart)  #botunumun olduğu yere sayfayı taşı 
         actionChains.click()
-        actionChains.perform() #zincire eklediğim tüm fonksiyonları benim için çalıştır. 
+        actionChains.perform() #zincire eklediğim , depolanan tüm fonksiyonları çalıştır. 
         
         remove = WebDriverWait(self.driver,5).until(ec.visibility_of_element_located((By . XPATH , "//*[@id='remove-test.allthethings()-t-shirt-(red)']")))
         testResult = remove.text == "Remove"
