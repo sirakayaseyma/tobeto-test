@@ -37,7 +37,7 @@ class Test_SauceDemo:
         
         loginButton = self.driver.find_element(By.ID , "login-button")
         loginButton.click()
-        
+        #ANASAYFAYA ULAŞIP ULAŞMADIĞININ KANITI
         #headerLogo = WebDriverWait(self.driver,5).until(ec.visibility_of_element_located((By.XPATH , "//*[@id='header_container']/div[1]/div[2]/div")))
         #testResult = headerLogo.text == "Swag Labs"
         addToCart = WebDriverWait(self.driver,5).until(ec.visibility_of_element_located((By . XPATH , "//*[@id='add-to-cart-test.allthethings()-t-shirt-(red)']")))
