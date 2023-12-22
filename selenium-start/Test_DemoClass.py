@@ -26,7 +26,7 @@ class Test_demoClass:
         loginButton = self.driver.find_element(By.ID , "login-button")
         loginButton.click()
         errorMessage = self.driver.find_element(By.XPATH, "//*[@id='login_button_container']/div/form/div[3]/h3")
-        assert errorMessage.text == "Epic sadface: Username and password do notmatch any user in this service."
+        assert errorMessage.text == "Epic sadface: Username and password do not match any user in this service."
         
     @pytest.mark.skip  
     def test_valid_login(self):
