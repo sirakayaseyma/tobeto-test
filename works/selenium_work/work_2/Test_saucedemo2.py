@@ -3,6 +3,9 @@ from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
 from time import sleep
 
+#Bir önceki ödevde yapılan işlemler pytest uyumlu hale getirilmiştir. (work_1)
+
+
 class Test_saucedemo2:
 #Kullanıcı adı ve şifre alanları boş geçildiğinde uyarı mesajı olarak 
 # "Epic sadface: Username is required" gösterilmelidir.
