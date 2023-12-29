@@ -7,6 +7,7 @@ from time import sleep
 from selenium.webdriver.support.wait import WebDriverWait #beklediğim koşulu sağlayana kadar bekle, ilgili driverı bekleten yapı
 from selenium.webdriver.support import expected_conditions as ec #beklenen koşullar
 from constants import globalConstants as gc
+import json
 
 class test_DemoClass2:
     def setup_method(self): #her test başlangıcında çalışacak fonksiyon.
@@ -29,8 +30,19 @@ class test_DemoClass2:
         
         return data
     
+    def readInvalidDataFromJson():
+        file = open("data/invalidLogin.json")
+        data = json.load(file)
+        parameter = [] 
+        
+        for user in data['users']:
+            username = user["username"]
+            password = user["password"]
+            parameter.append((username,password))
+        return parameter
+            
     
-    @pytest.mark.parametrize("username,password" , getData())
+    @pytest.mark.parametrize("username,password" , readInvalidDataFromJson())
     def test_invalid_login(self, username,password):
         usernameInput = WebDriverWait(self.driver,5).until(ec.visibility_of_element_located((By.ID , gc.USERNAME_ID)))
         usernameInput.send_keys(username)

@@ -1,6 +1,6 @@
 {
     "python.testing.pytestArgs": [
-        "selenium-start"
+        "works"
     ],
     "python.testing.unittestEnabled": false,
     "python.testing.pytestEnabled": true,
